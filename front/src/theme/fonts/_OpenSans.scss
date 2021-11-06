@@ -1,0 +1,10 @@
+@font-face {
+	font-family: OpenSans;
+	font-style: normal;
+	font-weight: map-get($font_weight, l);
+	src: url('/assets/fonts/OpenSans/OpenSans-Light/OpenSans-Light.eot');
+	src: url('/assets/fonts/OpenSans/OpenSans-Light/OpenSans-Light.eot?#iefix') format('embedded-opentype'),
+		url('/assets/fonts/OpenSans/OpenSans-Light/OpenSans-Light.woff') format('woff'),
+		url('/assets/fonts/OpenSans/OpenSans-Light/OpenSans-Light.ttf') format('truetype'),
+		url('/assets/fonts/OpenSans/OpenSans-Light/OpenSans-Light.svg#OpenSans-Light') format('svg');
+}

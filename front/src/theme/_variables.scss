@@ -1,0 +1,284 @@
+// -----------------------------------------------------------------------------
+// Layout size
+// -----------------------------------------------------------------------------
+$layout_padding: (
+	sm: 20px,
+	md: 32px,
+	lg: 50px,
+);
+$breakpoint: (
+	sm: 767px,
+	md: 1023px,
+	lg: 1280px,
+	xl: 1600px,
+);
+$border_radius: (
+	sm: 4px,
+	md: 8px,
+	lg: 50px,
+);
+
+$mobile_width: map-get($breakpoint, 'sm');
+$min_body_width: 320px;
+$header_height: 70px;
+$tabbar_height: 65px;
+
+
+// -----------------------------------------------------------------------------
+// Fonts
+// -----------------------------------------------------------------------------
+$font_family_zh: Circular, "PingFang-SC", "Hiragino Sans GB", "微软雅黑", "Microsoft YaHei", "Heiti SC" !important;
+$font_family_en: AirbnbCerealApp, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+$font_family_fa: iranyekan, sans-serif;
+$line_height_scale: 2;
+
+$font_size: (
+	sss: 7px,
+	ss: 10px,
+	s: 12px,
+	n: 14px,
+	l: 16px,
+	ll: 18px,
+	lll: 22px,
+	llll: 30px,
+	lllll: 38px,
+);
+
+$font_weight: (
+	ll: 300,
+	l: 500,
+	m: 700,
+	b: 800,
+	bb: 900,
+);
+
+// -----------------------------------------------------------------------------
+// Colors
+// -----------------------------------------------------------------------------
+$colors: (
+	WHITE: #ffffff,
+	HINT_OF_RED: #f8f6f8,
+	CONCRETE: #f2f2f2,
+	GALLERY: #efefef,
+	SAUVIGNON: #fff8f6,
+	MERCURY: #e7e7e7,
+	IRON: #dce0e0,
+	ALTO: #dddddd,
+	SILVER_SAND: #cacccd,
+	SILVER_CHALICE: #a7a7a7,
+	BOULDER: #767676,
+	TUNDORA: #484848,
+	GREEN: #2ecd71,
+
+	MINE_SHAFT: #222222,
+	BLACK: #000000,
+	DISCO: #92174d,
+	PERSIMMON: #ff5a5f,
+	OUTRAGEOU_ORANGE: #fc642d,
+	TOURLIN_SECONDARY: #c642aa,
+	TOURLIN_PRIMARY: #9142b9,
+	TEAL: #008489,
+	TURQUOISE: #33d9b2,
+	SUNSET_ORANGE: #ff5252,
+	YELLOW_ORANGE: #ffb400,
+	PETER_RIVER: #3498db,
+);
+
+$tag_color: (
+	primary: (
+		bg: map-get($colors, TOURLIN_PRIMARY),
+		text: map-get($colors, WHITE),
+	),
+	dark: (
+		bg: map-get($colors, BLACK),
+		text: map-get($colors, WHITE),
+	),
+	light: (
+		bg: map-get($colors, WHITE),
+		text: map-get($colors, BLACK),
+	),
+	grey: (
+		bg: map-get($colors, BOULDER),
+		text: map-get($colors, WHITE),
+	),
+	green: (
+		bg: map-get($colors, TURQUOISE),
+		text: map-get($colors, WHITE),
+	),
+	red: (
+		bg: map-get($colors, SUNSET_ORANGE),
+		text: map-get($colors, WHITE),
+	),
+	yellow: (
+		bg: map-get($colors, YELLOW_ORANGE),
+		text: map-get($colors, WHITE),
+	),
+	blue: (
+		bg: map-get($colors, PETER_RIVER),
+		text: map-get($colors, WHITE),
+	),
+);
+
+
+$text_color: (
+	brand: map-get($colors, DISCO),
+	primary: map-get($colors, TOURLIN_PRIMARY),
+	secondary: map-get($colors, TOURLIN_SECONDARY),
+	danger: map-get($colors, PERSIMMON),
+	success: map-get($colors, TEAL),
+	ddd: map-get($colors, BLACK),
+	dd: map-get($colors, MINE_SHAFT),
+	d: map-get($colors, TUNDORA),
+	n: map-get($colors, BOULDER),
+	l: map-get($colors, SILVER_CHALICE),
+	ll: map-get($colors, SILVER_SAND),
+	lll: map-get($colors, WHITE),
+);
+
+$border_color: (
+	ll: map-get($colors, GALLERY),
+	l: map-get($colors, IRON),
+	n: map-get($colors, MERCURY),
+	d: map-get($colors, BOULDER),
+	dd: map-get($colors, MINE_SHAFT),
+);
+
+$button_color: (
+	darker: (
+		bg: map-get($colors, BLACK),
+		border: map-get($colors, BLACK),
+		text: map-get($colors, WHITE),
+	),
+	darker_o: (
+		bg: transparent,
+		border: map-get($colors, MINE_SHAFT),
+		text: map-get($colors, MINE_SHAFT),
+		hover: (
+			bg: map-get($colors, CONCRETE),
+			border: map-get($colors, BLACK),
+			text: map-get($colors, MINE_SHAFT),
+		),
+		disabled: (
+			bg: rgba(0, 0, 0, 0.05),
+			border: map-get($colors, BOULDER),
+			text: map-get($colors, MINE_SHAFT),
+		),
+	),
+	dark: (
+		bg: map-get($colors, MINE_SHAFT),
+		border: map-get($colors, MINE_SHAFT),
+		text: map-get($colors, WHITE),
+		hover: (
+			bg: map-get($colors, BLACK),
+			border: map-get($colors, BLACK),
+			text: map-get($colors, WHITE),
+		),
+		disabled: (
+			bg: map-get($colors, ALTO),
+			border: map-get($colors, ALTO),
+			text: map-get($colors, WHITE),
+		),
+	),
+	dark_o: (
+		bg: transparent,
+		border: map-get($colors, ALTO),
+		text: map-get($colors, TUNDORA),
+		hover: (
+			bg: rgba(0, 0, 0, 0.05),
+			border: map-get($colors, BOULDER),
+			text: map-get($colors, MINE_SHAFT),
+		),
+		disabled: (
+			bg: rgba(0, 0, 0, 0.05),
+			border: map-get($colors, BOULDER),
+			text: map-get($colors, MINE_SHAFT),
+		),
+	),
+	light: (
+		bg: map-get($colors, WHITE),
+		border: map-get($colors, WHITE),
+		text: map-get($colors, TUNDORA),
+	),
+	light_o: (
+		bg: transparent,
+		border: map-get($colors, WHITE),
+		text: map-get($colors, WHITE),
+	),
+	green: (
+		bg: map-get($colors, GREEN),
+		border: map-get($colors, GREEN),
+		text: map-get($colors, WHITE),
+	),
+	grey: (
+		bg: map-get($colors, SILVER_CHALICE),
+		border: map-get($colors, SILVER_CHALICE),
+		text: map-get($colors, WHITE),
+	),
+	primary: (
+		bg: map-get($colors, TOURLIN_PRIMARY),
+		border: map-get($colors, TOURLIN_PRIMARY),
+		text: map-get($colors, WHITE),
+		active: (
+			bg: darken(map-get($colors, TOURLIN_PRIMARY), 10),
+		)
+	),
+	secondary: (
+		bg: map-get($colors, TOURLIN_SECONDARY),
+		border: map-get($colors, TOURLIN_SECONDARY),
+		text: map-get($colors, WHITE),
+	),
+	secondary_o: (
+		bg: transparent,
+		border: map-get($colors, TOURLIN_SECONDARY),
+		text: map-get($colors, TOURLIN_SECONDARY),
+	),
+	success: (
+		bg: map-get($colors, TEAL),
+		border: map-get($colors, TEAL),
+		text: map-get($colors, WHITE),
+		hover: (
+			bg: darken(map-get($colors, TEAL), 5),
+			border: darken(map-get($colors, TEAL), 5),
+			text: map-get($colors, WHITE),
+		),
+	),
+	error: (
+		bg: map-get($colors, SUNSET_ORANGE),
+		border: map-get($colors, SUNSET_ORANGE),
+		text: map-get($colors, WHITE),
+	),
+);
+
+$input_color: (
+	error: (
+		border: map-get($colors, OUTRAGEOU_ORANGE),
+		bg: map-get($colors, SAUVIGNON),
+	),
+	focus: (
+		border: map-get($colors, MINE_SHAFT),
+		bg: map-get($colors, WHITE),
+	),
+	disabled: (
+		border: map-get($colors, MINE_SHAFT),
+		bg: map-get($colors, CONCRETE),
+		text: map-get($colors, SILVER_CHALICE)
+	),
+);
+
+$badge_color: (
+	red: map-get($colors, SUNSET_ORANGE),
+	yellow: map-get($colors, YELLOW_ORANGE),
+	green: map-get($colors, TURQUOISE)
+);
+
+// Sections
+$header_dark_background_color: map-get($colors, BLACK);
+$header_dark_text_color: map-get($colors, WHITE);
+
+$header_light_background_color: map-get($colors, WHITE);
+$header_light_text_color: map-get($colors, TUNDORA);
+
+// Backgrounds
+$section_background_1: map-get($colors, HINT_OF_RED);
+$section_background_2: map-get($colors, GALLERY);
+$section_background_3: map-get($colors, TEAL);

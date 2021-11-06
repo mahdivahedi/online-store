@@ -1,0 +1,151 @@
+@import './variables';
+
+body {
+	color: map-get($text_color, d);
+	min-width: $min_body_width;
+	font-weight: normal;
+    font-size: map-get($font_size, n);
+	overflow-x: hidden;
+	
+	[lang='fa'] & { font-family: $font_family_fa }
+	// [lang='en'] & { font-family: $font_family_en }
+	// [lang='cn'] & { font-family: $font_family_zh }
+	// [lang='tr'] & { font-family: $font_family_en }
+	// [lang='ar'] & { font-family: $font_family_fa }
+
+	&.noscroll {
+		// position: fixed;
+		overflow: hidden;
+		// top: 0px;
+		// right: 0px;
+		// bottom: 0px;
+		// left: 0px;
+	}
+
+	&[loaded="true"] {
+		.main-overlay {
+			display: none;
+		}
+	}
+}
+
+
+:not(html):not(body)::-webkit-scrollbar {
+	width: 0px !important;
+	height: 0px !important;
+}
+
+
+.map-popup {
+	[lang='fa'] & { font-family: $font_family_fa }
+	[lang='en'] & { font-family: $font_family_en }
+	[lang='cn'] & { font-family: $font_family_zh }
+	[lang='tr'] & { font-family: $font_family_en }
+	[lang='ar'] & { font-family: $font_family_fa }
+}
+
+::placeholder {
+	/* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: map-get($text_color, l);
+	opacity: 1; /* Firefox */
+	// font-weight: map-get($font_weight, ll);
+}
+
+select,
+input,
+textarea {
+	width: 100%;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+a:hover {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.icon {
+	vertical-align: middle;
+}
+
+// ======================================================================
+// =========================== Text styles ==============================
+// ======================================================================
+.decoration-line-through {
+	text-decoration: line-through;
+}
+.decoration-underline {
+	text-decoration: underline;
+}
+
+// .select {
+// 	&::after {
+// 		// @include end(22px);
+// 	}
+// }
+
+.accordion {
+	transition: max-height 0.5s ease-in-out 0s !important;
+	overflow: hidden;
+
+	&.accordion-show {
+		max-height: 900px;
+	}
+
+	&.accordion-hide {
+		max-height: 0;
+	}
+}
+
+.header-cover {
+	padding: 30px;
+	background: map-get($text_color, primary);
+	color: map-get($font_size, lll);
+
+	h1 {
+		font-size: map-get($font_size, lll) !important;
+	}
+}
+.static-content {
+	font-size: map-get($font_size, l) !important;
+	line-height: 35px;
+	padding: 30px 0;
+	text-align: justify;
+
+	p {
+		padding: 10px 0;
+	}
+}
+
+.tab-buttons {
+	display: flex;
+	padding: 25px 0 0;
+	margin: -10px;
+	justify-content: center;
+
+	button {
+		margin: 10px;
+	}
+
+	span {
+		pointer-events: none;
+	}
+}
+
+.custom-toast {
+	text-align: center;
+	[lang='fa'] & { font-family: $font_family_fa }
+	[lang='en'] & { font-family: $font_family_en }
+	[lang='cn'] & { font-family: $font_family_zh }
+	[lang='tr'] & { font-family: $font_family_en }
+	[lang='ar'] & { font-family: $font_family_fa }
+}
+
+
+.Toastify__toast {
+	direction: inherit !important;
+}
